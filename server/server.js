@@ -1,5 +1,5 @@
-  var express     = require('express'),
-      mongoose    = require('mongoose');
+var express     = require('express'),
+    mongoose    = require('mongoose');
 
 var app = express();
 
@@ -14,7 +14,7 @@ module.exports = app;
 
 /* Walkthrough of the server
 
-  Express, mongoose, and our server are initialzed here
+  Express, mongoose, and our server are initialized here
   Next, we then inject our server and express into our config/middlware.js file for setup
     we also exported our server for easy testing, it is then started in index.js
 
