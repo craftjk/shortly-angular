@@ -1,9 +1,19 @@
 <div ng-controller='LinksController' id='container'>
 <h2>LINKS GET YOUR LINKS HERE</h2>
-{{ data.links.length }}
-  <ul>
-    <li ng-repeat='link in data.links'>{{ link }}</li>
-  </ul>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Address</th>
+      <th>Shortlynk</th>
+      <th>Visits</th>
+    </tr>
+    <tr ng-repeat='link in data.links'>
+      <td>{{ link.title }}</td>
+      <td>{{ link.url }}</td>
+      <td>{{ link.base_url }}/{{ link.code }}</td>
+      <td>{{ link.visits }}</td>
+    </tr>
+  </table>
 </div>
 
 
