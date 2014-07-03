@@ -157,11 +157,18 @@ table td, th{
 table tr{
   background: #b8d1f3;
 }
+
 /*  Define the background color for all the ODD background rows  */
-table tr:nth-child(odd){
+table tr:nth-child(even){
   background: #b8d1f3;
 }
+
 /*  Define the background color for all the EVEN background rows  */
-table tr:nth-child(even){
+table tr:nth-child(odd){
   background: #dae5f4;
+}
+
+table tr:nth-child(1){
+  background: none;
+  vertical-align: bottom;
 }

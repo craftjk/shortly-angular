@@ -1,14 +1,15 @@
 <div ng-controller='LinksController' id='container'>
   <h2>LINKS GET YOUR LINKS HERE</h2>
   Search: <input ng-model="searchText">
-  <table>
+  <a href='#/shorten'>"Shorten" a new url</a>
+  <table class="table-hover table-striped">
     <tr>
-      <th>Title</th>
-      <th>Address</th>
-      <th>Shortlynk</th>
-      <th>Visits</th>
+      <th style="width:40%">Title</th>
+      <th style="width:20%"><img src='/assets/long_link.png' width='20px'>Long Link</th>
+      <th style="width:20%"><img src='/assets/short_link.png' width='20px'>Short Link</th>
+      <th style="width:10%">Visits</th>
     </tr>
-    <tr ng-repeat='link in data.links | orderBy:"visits":true | filter:{title: searchText}'>
+    <tr class='fx-fade-right fx-speed-300 fx-easing-sine' ng-repeat='link in data.links | filter:{title: searchText}'>
       <td>{{ link.title }}</td>
       <td>{{ link.url }}</td>
       <td>{{ link.base_url }}/api/links/{{ link.code }}</td>
@@ -16,9 +17,7 @@
     </tr>
   </table>
   <br>
-  <a href='#/shorten'>"Shorten" a new url</a>
 </div>
-
 
 <!--
  visits: Number,
