@@ -2,6 +2,7 @@ body {
   margin: 0;
   margin-top: 10px;
   font-family: arial, sans-serif;
+  display: table-cell;
 }
 
 a {
@@ -144,11 +145,13 @@ input[type=url] {
 
 
 table{
+  margin: auto;
   width:100%;
   border-collapse:collapse;
 }
-table td{
-  padding:7px; border:#4e95f4 1px solid;
+table td, th{
+  padding:7px;
+  text-align:center;
 }
 /* provide some minimal visual accomodation for IE8 and below */
 table tr{
