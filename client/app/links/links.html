@@ -7,7 +7,7 @@
       <th>Shortlynk</th>
       <th>Visits</th>
     </tr>
-    <tr ng-repeat='link in data.links'>
+    <tr ng-repeat='link in data.links | orderBy:"visits":true'>
       <td>{{ link.title }}</td>
       <td>{{ link.url }}</td>
       <td>{{ link.base_url }}/api/links/{{ link.code }}</td>
