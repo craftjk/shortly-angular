@@ -1,5 +1,6 @@
 <div ng-controller='LinksController' id='container'>
   <h2>LINKS GET YOUR LINKS HERE</h2>
+  Search: <input ng-model="searchText">
   <table>
     <tr>
       <th>Title</th>
@@ -7,7 +8,7 @@
       <th>Shortlynk</th>
       <th>Visits</th>
     </tr>
-    <tr ng-repeat='link in data.links | orderBy:"visits":true'>
+    <tr ng-repeat='link in data.links | orderBy:"visits":true | filter:{title: searchText}'>
       <td>{{ link.title }}</td>
       <td>{{ link.url }}</td>
       <td>{{ link.base_url }}/api/links/{{ link.code }}</td>
