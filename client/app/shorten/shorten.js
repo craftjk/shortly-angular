@@ -15,5 +15,4 @@ angular.module('shortly.shorten', [])
       });
   };
 
-  // $location + hashed url
 });

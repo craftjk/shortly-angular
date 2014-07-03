@@ -1,8 +1,12 @@
 <div ng-controller='ShortenController' id='container'>
-  <input ng-model='link' placeholder='Insert link here' />
-  <button ng-click='addLink()'>SUBMIT</button>
+
+  <form name='userForm' novalidate>
+    <label>URL to shorten:</label>
+    <input name="urlLink" ng-model='link' ng-pattern='/^http:\/\/www\..+\..+$/' placeholder='Insert link here' />
+    <p ng-show="userForm.urlLink.$invalid">Must be a valid url.</p>
+
+    <button type='submit' ng-disabled="userForm.$invalid" ng-click='addLink()'>SUBMIT</button>
+  </form>
+
   <a href='#/shorten'>View all lynks</a>
-
 </div>
-
-
