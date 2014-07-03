@@ -1,6 +1,7 @@
-<div id='container'>
-<!-- Your code here -->
-
+<div ng-controller='ShortenController' id='container'>
+  <input ng-model='link' placeholder='Insert link here' />
+  <button ng-click='addLink()'>SUBMIT</button>
+  link: {{ link }}
 </div>
 
 
